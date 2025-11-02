@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author asad
+ * @version 02/011/2025
+ */
+
 public class TestThreadCheckArray {
     public static void main(String[] args) {
         try (Scanner input = new Scanner(System.in)) {
@@ -15,7 +20,6 @@ public class TestThreadCheckArray {
 
             System.out.println("Enter number");
             num = input.nextInt();
-
             SharedData sd = new SharedData(array, num);
 
             thread1 = new Thread(new ThreadCheckArray(sd), "thread1");
